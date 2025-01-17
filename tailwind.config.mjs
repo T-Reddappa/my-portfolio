@@ -1,5 +1,3 @@
-import { Outfit } from "next/font/google";
-
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -11,7 +9,7 @@ export default {
     extend: {
       colors: {
         lightHover: "#fcf4ff",
-        darkHover: "2a004a",
+        darkHover: "#2a004a",
         darkTheme: "#11001F",
       },
       fontFamily: {
@@ -25,7 +23,13 @@ export default {
       gridTemplateColumns: {
         auto: "repeat(auto-fit, minmax(200px, 1fr))",
       },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
     },
   },
-  plugins: [],
+  darkMode: "class",
+  plugins: [require("tailwindcss-animate")],
 };
