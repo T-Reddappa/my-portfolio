@@ -17,12 +17,11 @@ export default function Home() {
       (!("theme" in localStorage) &&
         window.matchMedia("(prefers-color-scheme:dark)").matches)
     ) {
-      setIsDarkMode(false);
+      setIsDarkMode(true);
     }
   }, []);
 
   useEffect(() => {
-    console.log(isDarkMode);
     if (isDarkMode) {
       document.documentElement.classList.add("dark");
       localStorage.setItem("theme", "dark");

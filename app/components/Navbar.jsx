@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   const [isScrolling, setIsScrolling] = useState(false);
+
   const sideMenuRef = useRef();
 
   const openMenu = () => {
