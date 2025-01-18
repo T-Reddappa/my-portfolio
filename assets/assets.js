@@ -39,13 +39,17 @@ import right_arrow_bold_dark from "./right-arrow-bold-dark.png";
 
 import nextjs from "./next.png";
 import reactjs from "./React.png";
-import nodejs from "./node.png";
+import nodejs from "./Node.js.png";
 import docker from "./Docker.png";
 import github from "./GitHub.png";
 import python from "./Python.png";
 import tailwind from "./Tailwind.png";
+import redux from "./Redux.png";
+import redis from "./Redis.png";
 
 export const assets = {
+  redis,
+  redux,
   nextjs,
   reactjs,
   nodejs,
@@ -120,18 +124,21 @@ export const workData = [
     description: "Real time document",
     bgImage: "/scribosphere.png",
     liveLink: "https://scribosphere.vercel.app/",
+    githubLink: "https://github.com/T-Reddappa/Scribosphere",
   },
   {
     title: "opinX",
     description: "Trading App",
     bgImage: "/work-2.png",
     liveLink: "https://scriboshpere.devreddy.in",
+    githubLink: "https://github.com/T-Reddappa/opinion-trading-app",
   },
   {
     title: "Vestidos",
     description: "Fashion E-commerce app",
     bgImage: "/vestidos.png",
     liveLink: "https://vestidos.devreddy.in",
+    githubLink: "https://github.com/T-Reddappa/E-Commerce-App",
   },
 ];
 
@@ -152,13 +159,15 @@ export const serviceData = [
 ];
 
 export const toolsData = [
-  assets.reactjs,
-  assets.nextjs,
-  assets.nodejs,
-  assets.HTML,
-  assets.tailwind,
-  assets.mongodb,
-  assets.docker,
-  assets.github,
-  assets.vscode,
+  { tool: assets.reactjs, name: "React.js" },
+  { tool: assets.nextjs, name: "Next.js" },
+  { tool: assets.nodejs, name: "Node.js" },
+  { tool: assets.HTML, name: "HTML" },
+  { tool: assets.tailwind, name: "Tailwind CSS" },
+  { tool: assets.redux, name: "Redux" },
+  { tool: assets.redis, name: "Redis" },
+  { tool: assets.mongodb, name: "MongoDB" },
+  { tool: assets.docker, name: "Docker" },
+  { tool: assets.github, name: "GitHub" },
+  { tool: assets.vscode, name: "VS Code" },
 ];

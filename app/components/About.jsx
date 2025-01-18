@@ -98,19 +98,24 @@ const About = ({ isDarkMode }) => {
             Technologies & Tools in my workflow
           </motion.h4>
           <motion.ul
-            className="flex items-center gap-3 sm:gap-5"
+            className="flex flex-wrap items-center gap-3 sm:gap-5 justify-center"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 1.5 }}
           >
-            {toolsData.map((tool, index) => (
-              <motion.li
+            {toolsData.map(({ tool, name }, index) => (
+              <div
                 key={index}
-                whileHover={{ scale: 1.1 }}
-                className="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:hover:bg-darkHover"
+                className=" flex flex-col  justify-center items-center gap-2"
               >
-                <Image src={tool} alt="tool" className="w-5 sm:w-7 " />
-              </motion.li>
+                <motion.li
+                  whileHover={{ scale: 1.1 }}
+                  className="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:hover:bg-darkHover"
+                >
+                  <Image src={tool} alt="tool" className="w-5 sm:w-7 " />
+                </motion.li>
+                <p className="text-sm">{name}</p>
+              </div>
             ))}
           </motion.ul>
         </motion.div>
