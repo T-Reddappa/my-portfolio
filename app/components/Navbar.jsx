@@ -19,13 +19,21 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (scrollY > 50) {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
         setIsScrolling(true);
       } else {
         setIsScrolling(false);
       }
-    });
+    };
+
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.addEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
@@ -35,8 +43,8 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
       </div>
 
       <nav
-        className={` w-full fixed top-0 px-5 lg:px-8 xl:px-[8%] py-4
-      flex items-center justify-between z-50  ${
+        className={` w-full fixed top-0 px-5 lg:px-8 xl:px-[8%] py-3
+      flex items-center justify-between z-50 ${
         isScrolling
           ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm dark:bg-darkTheme dark:shadow-white/20 "
           : ""
@@ -50,7 +58,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         </a>
 
         <ul
-          className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3  ${
+          className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${
             isScrolling
               ? ""
               : "bg-white shadow-sm bg-opacity-50 dark:border dark:border-white/50 dark:bg-transparent"
@@ -73,7 +81,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           </li>
           <li>
             <a href="#work" className="font-Ovo">
-              My Work
+              My work
             </a>
           </li>
           <li>
@@ -83,7 +91,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           </li>
         </ul>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 ">
           <button onClick={handleThemeChange}>
             <Image
               src={isDarkMode ? assets.sun_icon : assets.moon_icon}

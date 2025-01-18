@@ -26,13 +26,17 @@ const Header = () => {
             rotate: [0, 20, -10, 10, 0], // Rotate back and forth
           }}
           transition={{
+            delay: 1,
             duration: 1.5,
             repeat: Infinity,
-            repeatDelay: 2,
+            repeatDelay: 1,
           }}
           className="inline-block"
+          style={{
+            transformOrigin: "center", // Ensure rotation happens from the center
+          }}
         >
-          <Image src={assets.hand_icon} alt="hand-icon" className="w-6" />
+          <Image src={assets.hand_icon} alt="hand-icon" className="w-6 h-6" />
         </motion.div>
       </motion.h3>
       <motion.h1

@@ -3,6 +3,9 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "motion/react";
 
+import GitHubIcon from "@mui/icons-material/GitHub";
+import DashboardIcon from "@mui/icons-material/Dashboard";
+
 const Work = ({ isDarkMode }) => {
   return (
     <motion.div
@@ -10,7 +13,7 @@ const Work = ({ isDarkMode }) => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       id="work"
-      className="w-full px-[12%] py-10 scroll-mt-20"
+      className="w-full px-[12%] py-8 scroll-mt-20"
     >
       <motion.h4
         initial={{ opacity: 0, y: -20 }}
@@ -35,8 +38,9 @@ const Work = ({ isDarkMode }) => {
         transition={{ duration: 0.5, delay: 0.7 }}
         className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
       >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem ea
-        soluta odit. Est animi dolore, fugiat sint sunt dolorem
+        These projects showcase my expertise in building functional and
+        user-focused web applications. With technologies like WebSockets for
+        real-time updates and Razorpay for payment integration.
       </motion.p>
 
       <motion.div
@@ -50,29 +54,53 @@ const Work = ({ isDarkMode }) => {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
             key={index}
-            className="aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group border border-gray-400"
-            style={{ backgroundImage: project.bgImage }}
+            className="aspect-square rounded-lg relative group border border-gray-400  overflow-hidden hover:shadow-black hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white
+            p-5 "
           >
-            <div className="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
-              <div>
-                <h2>{project.title}</h2>
-                <p>{project.description}</p>
+            <motion.div
+              initial={{ scale: 1 }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.7 }}
+              className="w-full h-3/5 relative overflow-hidden"
+            >
+              <div
+                style={{ backgroundImage: `url(${project.bgImage})` }}
+                className="w-full h-full bg-cover bg-center transform transition-transform duration-500 group-hover:scale-110"
+              />
+              {/* Optional overlay on hover */}
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
+            </motion.div>
+
+            {/* <div
+              style={{ backgroundImage: `url(${project.bgImage})` }}
+              className="w-full h-3/5 object-cover bg-cover bg-center "
+            ></div> */}
+
+            <a
+              className="absolute w-full bottom-0 background font-Ovo duration-500 group-hover:bottom-3"
+              href={project.liveLink}
+              target="_blank"
+            >
+              <h3 className="font-Ovo text-2xl">{project.title}</h3>
+              <p className="text-sm">{project.description}</p>
+
+              <div className="text-center block mb-4 pr-8">
+                Visit Site <DashboardIcon fontSize="small" />
               </div>
-              <div className="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lightHover transition">
-                <Image src={assets.send_icon} alt="send-icon" className="w-5" />
-              </div>
-            </div>
+            </a>
           </motion.div>
         ))}
       </motion.div>
+
       <motion.a
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.8, duration: 0.5 }}
-        href=""
+        href="https://github.com/T-Reddappa"
+        target="_blank"
         className="w-max flex items-center justify-center gap-4 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-lightHover duration-500 dark:text-white dark:border-white dark:hover:bg-darkHover"
       >
-        Show more{" "}
+        Show more <GitHubIcon />
         <Image
           src={
             isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_bold

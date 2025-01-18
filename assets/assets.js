@@ -12,6 +12,7 @@ import git from "./git.png";
 import mongodb from "./mongodb.png";
 import right_arrow_white from "./right-arrow-white.png";
 import logo from "./logo.png";
+import HTML from "./HTML5.png";
 import logo_dark from "./logo_dark.png";
 import mail_icon from "./mail_icon.png";
 import mail_icon_dark from "./mail_icon_dark.png";
@@ -36,7 +37,22 @@ import send_icon from "./send-icon.png";
 import right_arrow_bold from "./right-arrow-bold.png";
 import right_arrow_bold_dark from "./right-arrow-bold-dark.png";
 
+import nextjs from "./next.png";
+import reactjs from "./React.png";
+import nodejs from "./node.png";
+import docker from "./Docker.png";
+import github from "./GitHub.png";
+import python from "./Python.png";
+import tailwind from "./Tailwind.png";
+
 export const assets = {
+  nextjs,
+  reactjs,
+  nodejs,
+  docker,
+  github,
+  python,
+  tailwind,
   user_image,
   code_icon,
   code_icon_dark,
@@ -74,85 +90,75 @@ export const assets = {
   send_icon,
   right_arrow_bold,
   right_arrow_bold_dark,
+  HTML,
 };
+
+export const infoList = [
+  {
+    icon: assets.code_icon,
+    iconDark: assets.code_icon_dark,
+    title: "Frameworks and Libraries",
+    description: "React.js, Next.js, Node.js, Express.js, MongoDB",
+  },
+  {
+    icon: assets.code_icon,
+    iconDark: assets.code_icon_dark,
+    title: "Programming Languages",
+    description: "TypeScript, JavaScript, Python, HTML and CSS",
+  },
+  {
+    icon: assets.project_icon,
+    iconDark: assets.project_icon_dark,
+    title: "Projects",
+    description: "Click to navigate to my portfolio section.",
+  },
+];
 
 export const workData = [
   {
-    title: "Frontend project",
-    description: "Web Design",
-    bgImage: "/work-1.png",
+    title: "Collab-docs",
+    description: "Real time document",
+    bgImage: "/scribosphere.png",
+    liveLink: "https://scribosphere.vercel.app/",
   },
   {
-    title: "Geo based app",
-    description: "Mobile App",
+    title: "opinX",
+    description: "Trading App",
     bgImage: "/work-2.png",
+    liveLink: "https://scriboshpere.devreddy.in",
   },
   {
-    title: "Photography site",
-    description: "Web Design",
-    bgImage: "/work-3.png",
-  },
-  {
-    title: "UI/UX designing",
-    description: "UI/UX Design",
-    bgImage: "/work-4.png",
+    title: "Vestidos",
+    description: "Fashion E-commerce app",
+    bgImage: "/vestidos.png",
+    liveLink: "https://vestidos.devreddy.in",
   },
 ];
 
 export const serviceData = [
   {
     icon: assets.web_icon,
-    title: "Web design",
+    title: "Web App Development",
     description: "Web development is the process of building, programming...",
     link: "",
   },
   {
     icon: assets.mobile_icon,
-    title: "Mobile app",
+    title: "Mobile App Development",
     description:
       "Mobile app development involves creating software for mobile devices...",
     link: "",
   },
-  {
-    icon: assets.ui_icon,
-    title: "UI/UX design",
-    description:
-      "UI/UX design focuses on creating a seamless user experience...",
-    link: "",
-  },
-  {
-    icon: assets.graphics_icon,
-    title: "Graphics design",
-    description: "Creative design solutions to enhance visual communication...",
-    link: "",
-  },
-];
-
-export const infoList = [
-  {
-    icon: assets.code_icon,
-    iconDark: assets.code_icon_dark,
-    title: "Languages",
-    description: "React Js, Next Js, TypeScript, Node Js",
-  },
-  {
-    icon: assets.project_icon,
-    iconDark: assets.project_icon_dark,
-    title: "Projects",
-    description: "Built more than 5 projects",
-  },
-  {
-    icon: assets.edu_icon,
-    iconDark: assets.edu_icon_dark,
-    title: "Education",
-    description: "B.Tech",
-  },
 ];
 
 export const toolsData = [
-  assets.vscode,
-  assets.firebase,
+  assets.reactjs,
+  assets.nextjs,
+  assets.nodejs,
+  assets.HTML,
+  assets.tailwind,
   assets.mongodb,
-  assets.figma,
-  assets.git,
+  assets.docker,
+  assets.github,
+  assets.vscode,
 ];

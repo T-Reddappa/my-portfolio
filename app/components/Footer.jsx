@@ -1,8 +1,15 @@
-import { assets } from "@/assets/assets";
 import Image from "next/image";
 import React from "react";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import XIcon from "@mui/icons-material/X";
+
+import { assets } from "@/assets/assets";
 
 const Footer = ({ isDarkMode }) => {
+  const mailtoLink =
+    "mailto:reddy3001@gmail.com?subject=Hello&body=Hi, I wanted to reach out about...";
+
   return (
     <div className="mt-20">
       <div className="text-center">
@@ -12,12 +19,17 @@ const Footer = ({ isDarkMode }) => {
         </div>
 
         <div className="w-max flex items-center gap-2 mx-auto">
-          <Image
-            src={isDarkMode ? assets.mail_icon_dark : assets.mail_icon}
-            alt="mail"
-            className="w-6"
-          />
-          reddy3001@gmail.com
+          <a
+            href={mailtoLink}
+            className="w-max flex items-center gap-2 mx-auto"
+          >
+            <Image
+              src={isDarkMode ? assets.mail_icon_dark : assets.mail_icon}
+              alt="mail"
+              className="w-6"
+            />
+            reddy3001@gmail.com
+          </a>
         </div>
       </div>
 
@@ -25,24 +37,33 @@ const Footer = ({ isDarkMode }) => {
         <p>© 2025 Reddappa. All rights reserved.</p>
         <ul className="flex items-center gap-10 justify-center mt-4 sm:mt-0">
           <li>
-            <a href="https://github.com/T-Reddappa" target="_blank">
+            <a
+              href="https://github.com/T-Reddappa"
+              className="flex items-center gap-2"
+              target="_blank"
+            >
+              <GitHubIcon />
               Github
             </a>
           </li>
           <li>
             <a
               href="https://linkedin.com/in/reddappa-t-a872331b5"
+              className="flex items-center gap-2"
               target="_blank"
             >
+              <LinkedInIcon />
               LinkedIn
             </a>
           </li>
           <li>
             <a
-              href="https://linkedin.com/in/reddappa-t-a872331b5"
+              href="https://x.com/Reddy_3001"
+              className="flex items-center gap-2"
               target="_blank"
             >
-              Twitter //Todo
+              <XIcon fontSize="small" />
+              Twitter
             </a>
           </li>
         </ul>
