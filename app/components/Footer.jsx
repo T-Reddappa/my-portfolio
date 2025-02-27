@@ -8,7 +8,7 @@ import { assets } from "@/assets/assets";
 
 const Footer = ({ isDarkMode }) => {
   const mailtoLink =
-    "mailto:reddy3001@gmail.com?subject=Hello&body=Hi, I wanted to reach out about...";
+    "mailto:reddappa3001@gmail.com?subject=Hello&body=Hi, I wanted to reach out about...";
 
   return (
     <div className="mt-20">
