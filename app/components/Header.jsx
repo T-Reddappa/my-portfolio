@@ -65,7 +65,7 @@ const Header = () => {
           transition={{ duration: 0.6, delay: 1.2 }}
           href="/reddy-resume.pdf"
           target="_blank"
-          download
+          download 
           rel="noopener noreferrer"
           className="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white/90 dark:text-black"
         >

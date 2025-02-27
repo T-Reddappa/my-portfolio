@@ -28,7 +28,7 @@ const Footer = ({ isDarkMode }) => {
               alt="mail"
               className="w-6"
             />
-            reddy3001@gmail.com
+            reddappa3001@gmail.com
           </a>
         </div>
       </div>
